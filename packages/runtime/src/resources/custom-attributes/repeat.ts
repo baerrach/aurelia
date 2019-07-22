@@ -102,8 +102,9 @@ export class Repeat<C extends ObservedCollection = IObservedArray, T extends INo
   public key?: string;
   public readonly noProxy: true;
 
-  // tslint:disable-next-line: prefer-readonly // This is set by the controller after this instance is constructed
-  public $controller!: IController<T>;
+  // TODO: add me once this is fixed: https://github.com/typescript-eslint/typescript-eslint/issues/752
+  // TODO: eslint-disable-next-line @typescript-eslint/prefer-readonly
+  public $controller!: IController<T>; // This is set by the controller after this instance is constructed
 
   private task: ILifecycleTask;
 

@@ -115,8 +115,6 @@ export const CustomElement: ICustomElementResource = {
   define
 };
 
-// tslint:enable:align
-
 // TODO
 // ## DefaultSlotProjector
 // An implementation of IElementProjector that can handle a subset of default
@@ -142,7 +140,7 @@ export const CustomElement: ICustomElementResource = {
 
 export interface ICustomElementDecorator {
   // Using a type breaks syntax highlighting: https://github.com/Microsoft/TypeScript-TmLanguage/issues/481
-  // tslint:disable-next-line:callable-types
+  // eslint-disable-next-line @typescript-eslint/prefer-function-type
   <T extends Constructable>(target: T): T & ICustomElementType<T>;
 }
 
